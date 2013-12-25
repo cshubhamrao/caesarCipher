@@ -15,19 +15,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package test;
+package caesarCipher;
 
 /**
  *
  * @author shubham
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class CaesarCipherUI extends javax.swing.JFrame {
     private static final long serialVersionUID = 1L;
 
     /**
      * Creates new form NewJFrame
      */
-    public NewJFrame() {
+    public CaesarCipherUI() {
         initComponents();
     }
     
@@ -90,7 +90,7 @@ public class NewJFrame extends javax.swing.JFrame {
         setName("caesarCipher"); // NOI18N
 
         decryptedText_label.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("test/Bundle"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("caesarCipher/Bundle"); // NOI18N
         decryptedText_label.setText(bundle.getString("ENTER THE TEXT:")); // NOI18N
 
         shift_label.setText(bundle.getString("ENTER THE SHIFT TO USE")); // NOI18N
@@ -127,7 +127,7 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(encryptedText_label)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(decryptedText_label)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
                                 .addComponent(shift_label)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(shift, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -187,13 +187,13 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CaesarCipherUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CaesarCipherUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CaesarCipherUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CaesarCipherUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -201,7 +201,7 @@ public class NewJFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new NewJFrame().setVisible(true);
+                new CaesarCipherUI().setVisible(true);
             }
         });
     }
